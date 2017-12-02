@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SimpleD3Component } from './simple-d3/simple-d3.component';
+import { VisLaborComponent } from './vis-labor/vis-labor.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleD3Component
+    SimpleD3Component,
+    VisLaborComponent
   ],
   imports: [
     BrowserModule

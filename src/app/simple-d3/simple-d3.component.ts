@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import {VisData} from './simple-d3.model';
 
 
 @Component({
@@ -9,7 +10,7 @@ import * as d3 from 'd3';
 })
 export class SimpleD3Component implements OnInit {
 
-  private dataset = [];                         //Initialize empty array
+  private data = new VisData();
 
   constructor() { }
 
@@ -18,14 +19,11 @@ export class SimpleD3Component implements OnInit {
   }
 
   public drawSimpleChart(): void {
-    for (var i = 0; i < 25; i++) {            //Loop 25 times
-      var newNumber = Math.random() * 30;   //New random number (0-30)
-      this.dataset.push(newNumber);              //Add new number to array
-    }
+
 
     d3.select('div')
       .selectAll('div')
-      .data(this.dataset)
+      .data(this.data.generate())
       .enter()
       .append('div')
       .attr('class', 'bar')
