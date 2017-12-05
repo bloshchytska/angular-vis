@@ -1,6 +1,14 @@
-div.bar {
+rect {
+  margin-right: 2px;
   display: inline-block;
-  width: 20px;
-  height: 75px;   /* We'll override height later */
+  background-color: teal;
+}
+
+body {
+  background-color: #888 !important;
+}
+
+.breadcrumb {
   background-color: #333;
+  border-radius: 0 !important;
 }
