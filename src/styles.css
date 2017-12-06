@@ -5,10 +5,20 @@ rect {
 }
 
 body {
-  background-color: #888 !important;
+  background-color: #323232 !important;
 }
 
 .breadcrumb {
   background-color: #333;
   border-radius: 0 !important;
+}
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
 }
